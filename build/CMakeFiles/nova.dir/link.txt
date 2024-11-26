@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Werror -g CMakeFiles/nova.dir/src/main.c.o CMakeFiles/nova.dir/src/game.c.o -o nova  -lSDL2 -lSDL2_ttf -lSDL2 -lSDL2_image -lSDL2 -lm -lSDL2_ttf -lSDL2_image -lm 
