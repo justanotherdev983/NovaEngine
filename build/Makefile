@@ -129,6 +129,30 @@ nova/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/build
 .PHONY : nova/fast
 
+src/ascii.o: src/ascii.c.o
+.PHONY : src/ascii.o
+
+# target to build an object file
+src/ascii.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.o
+.PHONY : src/ascii.c.o
+
+src/ascii.i: src/ascii.c.i
+.PHONY : src/ascii.i
+
+# target to preprocess a source file
+src/ascii.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.i
+.PHONY : src/ascii.c.i
+
+src/ascii.s: src/ascii.c.s
+.PHONY : src/ascii.s
+
+# target to generate assembly for a file
+src/ascii.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.s
+.PHONY : src/ascii.c.s
+
 src/game.o: src/game.c.o
 .PHONY : src/game.o
 
@@ -177,6 +201,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/raycast.o: src/raycast.c.o
+.PHONY : src/raycast.o
+
+# target to build an object file
+src/raycast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.o
+.PHONY : src/raycast.c.o
+
+src/raycast.i: src/raycast.c.i
+.PHONY : src/raycast.i
+
+# target to preprocess a source file
+src/raycast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.i
+.PHONY : src/raycast.c.i
+
+src/raycast.s: src/raycast.c.s
+.PHONY : src/raycast.s
+
+# target to generate assembly for a file
+src/raycast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.s
+.PHONY : src/raycast.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nova"
+	@echo "... src/ascii.o"
+	@echo "... src/ascii.i"
+	@echo "... src/ascii.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/raycast.o"
+	@echo "... src/raycast.i"
+	@echo "... src/raycast.s"
 .PHONY : help
 
 

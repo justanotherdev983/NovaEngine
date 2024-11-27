@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 #include <math.h>
+#include <stdbool.h>
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
@@ -25,6 +26,8 @@ typedef double f64;
 typedef float f32;
 
 typedef uint8_t i8;
+
+
 
 typedef struct vec2i32 {
     i32 x;
@@ -111,3 +114,76 @@ static inline vec2f32 vec2f32normalize(vec2f32 v) {
     if (len == 0) return (vec2f32){0, 0};
     return vec2f32scale(v, 1.0f / len);
 }
+
+// game structs
+
+typedef struct {
+    vec2f32 side_dist;
+    vec2f32 delta_dist;
+    int step_x;
+    int step_y;
+} dda_params_t;
+
+typedef struct {
+    bool hit;
+    int side;
+    vec2f32 map_pos;
+    float perp_wall_dist;
+} ray_collision_t;
+
+typedef struct {
+    int line_height;
+    int draw_start;
+    int draw_end;
+} wall_params_t;
+
+
+
+typedef struct map {
+    int* data;
+    i32 width;
+    i32 height;
+} map_t;
+
+typedef struct player {
+    vec2f32 position;
+    vec2f32 direction;
+    vec2f32 plane;
+} player_t;
+
+typedef struct ray {
+    vec2f32 position;
+    vec2f32 direction;
+} ray_t;
+
+typedef struct camera {
+    vec2f32 position;
+    vec2f32 direction;
+    vec2f32 plane;
+} camera_t;
+
+
+typedef struct game_state {
+    SDL_Window* window;
+    SDL_Renderer* renderer;
+    TTF_Font* font;
+    SDL_Surface* shotgun_surface;
+    SDL_Texture* shotgun_texture;
+    SDL_Texture* ascii_texture;
+
+    struct {
+        map_t map;
+        player_t player;
+        camera_t camera;
+    } world;
+    
+    struct {
+        SDL_Window* window;
+        SDL_Renderer* renderer;
+    } world_2d;
+
+    int image_width;
+    int image_height;
+    bool is_running;
+
+} game_state_t;

@@ -36,6 +36,8 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 set(SOURCES
     src/main.c
     src/game.c
+    src/raycast.c
+    src/ascii.c
 )
 
 # Add executable
