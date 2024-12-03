@@ -1,0 +1,28 @@
+void draw_ascii_brightness(char* ascii_art, wall_params_t wall, SDL_Renderer* renderer, ray_collision_t collision) {
+    for (int i = 0; i < wall.line_height; i++) {
+        char ascci_char[2] = {ascii_art[i]};
+        if (collision.side == 1) {
+            
+        } else {
+            
+        }
+    }
+}
+
+void draw_ascii_wall_slice(SDL_Renderer* renderer, int x, wall_params_t wall, ray_collision_t collision) {
+    char* ascii_art = generate_random_ascii_art(wall.line_height);
+
+    //int brightness = 
+    
+
+    SDL_SetRenderDrawColor(renderer,
+                collision.side == 1 ? 200 : 255,  // Different brightness for sides
+                collision.side == 1 ? 200 : 0,
+                collision.side == 1 ? 200 : 0,
+                255);
+            SDL_RenderDrawLine(renderer, x, wall.draw_start, x, wall.draw_end);
+}
+
+How do i make it so 
+    I draw an ascii char to the wall ontop of renderer color, 
+    dependand on the brightness
