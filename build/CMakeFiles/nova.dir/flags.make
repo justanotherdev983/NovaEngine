@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/include/SDL2 -I/home/bou/CLionProjects/NovaEngine/include
+C_INCLUDES = -I/usr/include/SDL2 -I/home/bou/CLionProjects/NovaEngineBack/NovaEngine/include
 
-C_FLAGS =  -Wall -Wextra -Werror -g -std=gnu99
+C_FLAGS =  -Wall -Wextra -g -fsanitize=address -g -std=gnu99
 

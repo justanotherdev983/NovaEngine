@@ -9,7 +9,7 @@ set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Compiler flags
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Werror -g")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -g -fsanitize=address")
 
 # Include FindPkgConfig module
 include(FindPkgConfig)
@@ -35,9 +35,15 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 # Source files
 set(SOURCES
     src/main.c
-    src/game.c
-    src/raycast.c
-    src/ascii.c
+    src/core/engine.c
+    src/core/world.c
+    src/input/input_handler.c
+    src/physics/collision.c
+    src/render/ascii_render.c
+    src/render/sdl_render.c
+    src/render/raycast.c
+    src/util/math.c
+    src/util/error.c
 )
 
 # Add executable
@@ -48,3 +54,28 @@ target_link_libraries(nova ${SDL2_LIBRARIES} ${SDL2_TTF_LIBRARIES} ${SDL2_IMAGE_
 
 # Set the output directory for the compiled binary
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
+
+# Find clang-format
+find_program(CLANG_FORMAT_EXE NAMES clang-format)
+
+# Include header files in the formatting process
+file(GLOB_RECURSE HEADER_FILES ${CMAKE_SOURCE_DIR}/include/*.h)
+list(APPEND SOURCES ${HEADER_FILES})
+
+# Define a custom target for formatting
+if(CLANG_FORMAT_EXE)
+    add_custom_target(
+        format
+        COMMAND ${CLANG_FORMAT_EXE} -i ${SOURCES}
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        COMMENT "Running clang-format on source and header files"
+    )
+endif()
+
+# Configure clang-tidy
+find_program(CLANG_TIDY_EXE NAMES clang-tidy)
+
+if(CLANG_TIDY_EXE)
+    set(CLANG_TIDY_CHECKS "-*,clang-analyzer-*,modernize-*")
+    set_target_properties(nova PROPERTIES C_CLANG_TIDY "${CLANG_TIDY_EXE}")
+endif()

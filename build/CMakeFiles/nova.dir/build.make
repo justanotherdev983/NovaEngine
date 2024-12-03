@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bou/CLionProjects/NovaEngine
+CMAKE_SOURCE_DIR = /home/bou/CLionProjects/NovaEngineBack/NovaEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bou/CLionProjects/NovaEngine/build
+CMAKE_BINARY_DIR = /home/bou/CLionProjects/NovaEngineBack/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nova.dir/depend.make
@@ -70,78 +70,174 @@ include CMakeFiles/nova.dir/progress.make
 include CMakeFiles/nova.dir/flags.make
 
 CMakeFiles/nova.dir/src/main.c.o: CMakeFiles/nova.dir/flags.make
-CMakeFiles/nova.dir/src/main.c.o: ../src/main.c
+CMakeFiles/nova.dir/src/main.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/main.c
 CMakeFiles/nova.dir/src/main.c.o: CMakeFiles/nova.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nova.dir/src/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/main.c.o -MF CMakeFiles/nova.dir/src/main.c.o.d -o CMakeFiles/nova.dir/src/main.c.o -c /home/bou/CLionProjects/NovaEngine/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nova.dir/src/main.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/main.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/main.c.o -MF CMakeFiles/nova.dir/src/main.c.o.d -o CMakeFiles/nova.dir/src/main.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/main.c
 
 CMakeFiles/nova.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngine/src/main.c > CMakeFiles/nova.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/main.c > CMakeFiles/nova.dir/src/main.c.i
 
 CMakeFiles/nova.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngine/src/main.c -o CMakeFiles/nova.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/main.c -o CMakeFiles/nova.dir/src/main.c.s
 
-CMakeFiles/nova.dir/src/game.c.o: CMakeFiles/nova.dir/flags.make
-CMakeFiles/nova.dir/src/game.c.o: ../src/game.c
-CMakeFiles/nova.dir/src/game.c.o: CMakeFiles/nova.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nova.dir/src/game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/game.c.o -MF CMakeFiles/nova.dir/src/game.c.o.d -o CMakeFiles/nova.dir/src/game.c.o -c /home/bou/CLionProjects/NovaEngine/src/game.c
+CMakeFiles/nova.dir/src/core/engine.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/core/engine.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/engine.c
+CMakeFiles/nova.dir/src/core/engine.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nova.dir/src/core/engine.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/engine.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/core/engine.c.o -MF CMakeFiles/nova.dir/src/core/engine.c.o.d -o CMakeFiles/nova.dir/src/core/engine.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/engine.c
 
-CMakeFiles/nova.dir/src/game.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngine/src/game.c > CMakeFiles/nova.dir/src/game.c.i
+CMakeFiles/nova.dir/src/core/engine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/core/engine.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/engine.c > CMakeFiles/nova.dir/src/core/engine.c.i
 
-CMakeFiles/nova.dir/src/game.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngine/src/game.c -o CMakeFiles/nova.dir/src/game.c.s
+CMakeFiles/nova.dir/src/core/engine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/core/engine.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/engine.c -o CMakeFiles/nova.dir/src/core/engine.c.s
 
-CMakeFiles/nova.dir/src/raycast.c.o: CMakeFiles/nova.dir/flags.make
-CMakeFiles/nova.dir/src/raycast.c.o: ../src/raycast.c
-CMakeFiles/nova.dir/src/raycast.c.o: CMakeFiles/nova.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nova.dir/src/raycast.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/raycast.c.o -MF CMakeFiles/nova.dir/src/raycast.c.o.d -o CMakeFiles/nova.dir/src/raycast.c.o -c /home/bou/CLionProjects/NovaEngine/src/raycast.c
+CMakeFiles/nova.dir/src/core/world.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/core/world.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/world.c
+CMakeFiles/nova.dir/src/core/world.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nova.dir/src/core/world.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/world.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/core/world.c.o -MF CMakeFiles/nova.dir/src/core/world.c.o.d -o CMakeFiles/nova.dir/src/core/world.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/world.c
 
-CMakeFiles/nova.dir/src/raycast.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/raycast.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngine/src/raycast.c > CMakeFiles/nova.dir/src/raycast.c.i
+CMakeFiles/nova.dir/src/core/world.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/core/world.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/world.c > CMakeFiles/nova.dir/src/core/world.c.i
 
-CMakeFiles/nova.dir/src/raycast.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/raycast.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngine/src/raycast.c -o CMakeFiles/nova.dir/src/raycast.c.s
+CMakeFiles/nova.dir/src/core/world.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/core/world.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/core/world.c -o CMakeFiles/nova.dir/src/core/world.c.s
 
-CMakeFiles/nova.dir/src/ascii.c.o: CMakeFiles/nova.dir/flags.make
-CMakeFiles/nova.dir/src/ascii.c.o: ../src/ascii.c
-CMakeFiles/nova.dir/src/ascii.c.o: CMakeFiles/nova.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nova.dir/src/ascii.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/ascii.c.o -MF CMakeFiles/nova.dir/src/ascii.c.o.d -o CMakeFiles/nova.dir/src/ascii.c.o -c /home/bou/CLionProjects/NovaEngine/src/ascii.c
+CMakeFiles/nova.dir/src/input/input_handler.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/input/input_handler.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/input/input_handler.c
+CMakeFiles/nova.dir/src/input/input_handler.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nova.dir/src/input/input_handler.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/input/input_handler.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/input/input_handler.c.o -MF CMakeFiles/nova.dir/src/input/input_handler.c.o.d -o CMakeFiles/nova.dir/src/input/input_handler.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/input/input_handler.c
 
-CMakeFiles/nova.dir/src/ascii.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/ascii.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngine/src/ascii.c > CMakeFiles/nova.dir/src/ascii.c.i
+CMakeFiles/nova.dir/src/input/input_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/input/input_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/input/input_handler.c > CMakeFiles/nova.dir/src/input/input_handler.c.i
 
-CMakeFiles/nova.dir/src/ascii.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/ascii.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngine/src/ascii.c -o CMakeFiles/nova.dir/src/ascii.c.s
+CMakeFiles/nova.dir/src/input/input_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/input/input_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/input/input_handler.c -o CMakeFiles/nova.dir/src/input/input_handler.c.s
+
+CMakeFiles/nova.dir/src/physics/collision.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/physics/collision.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/physics/collision.c
+CMakeFiles/nova.dir/src/physics/collision.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nova.dir/src/physics/collision.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/physics/collision.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/physics/collision.c.o -MF CMakeFiles/nova.dir/src/physics/collision.c.o.d -o CMakeFiles/nova.dir/src/physics/collision.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/physics/collision.c
+
+CMakeFiles/nova.dir/src/physics/collision.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/physics/collision.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/physics/collision.c > CMakeFiles/nova.dir/src/physics/collision.c.i
+
+CMakeFiles/nova.dir/src/physics/collision.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/physics/collision.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/physics/collision.c -o CMakeFiles/nova.dir/src/physics/collision.c.s
+
+CMakeFiles/nova.dir/src/render/ascii_render.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/render/ascii_render.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/ascii_render.c
+CMakeFiles/nova.dir/src/render/ascii_render.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nova.dir/src/render/ascii_render.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/ascii_render.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/render/ascii_render.c.o -MF CMakeFiles/nova.dir/src/render/ascii_render.c.o.d -o CMakeFiles/nova.dir/src/render/ascii_render.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/ascii_render.c
+
+CMakeFiles/nova.dir/src/render/ascii_render.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/render/ascii_render.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/ascii_render.c > CMakeFiles/nova.dir/src/render/ascii_render.c.i
+
+CMakeFiles/nova.dir/src/render/ascii_render.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/render/ascii_render.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/ascii_render.c -o CMakeFiles/nova.dir/src/render/ascii_render.c.s
+
+CMakeFiles/nova.dir/src/render/sdl_render.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/render/sdl_render.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/sdl_render.c
+CMakeFiles/nova.dir/src/render/sdl_render.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nova.dir/src/render/sdl_render.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/sdl_render.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/render/sdl_render.c.o -MF CMakeFiles/nova.dir/src/render/sdl_render.c.o.d -o CMakeFiles/nova.dir/src/render/sdl_render.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/sdl_render.c
+
+CMakeFiles/nova.dir/src/render/sdl_render.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/render/sdl_render.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/sdl_render.c > CMakeFiles/nova.dir/src/render/sdl_render.c.i
+
+CMakeFiles/nova.dir/src/render/sdl_render.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/render/sdl_render.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/sdl_render.c -o CMakeFiles/nova.dir/src/render/sdl_render.c.s
+
+CMakeFiles/nova.dir/src/render/raycast.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/render/raycast.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/raycast.c
+CMakeFiles/nova.dir/src/render/raycast.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nova.dir/src/render/raycast.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/raycast.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/render/raycast.c.o -MF CMakeFiles/nova.dir/src/render/raycast.c.o.d -o CMakeFiles/nova.dir/src/render/raycast.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/raycast.c
+
+CMakeFiles/nova.dir/src/render/raycast.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/render/raycast.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/raycast.c > CMakeFiles/nova.dir/src/render/raycast.c.i
+
+CMakeFiles/nova.dir/src/render/raycast.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/render/raycast.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/render/raycast.c -o CMakeFiles/nova.dir/src/render/raycast.c.s
+
+CMakeFiles/nova.dir/src/util/math.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/util/math.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/math.c
+CMakeFiles/nova.dir/src/util/math.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nova.dir/src/util/math.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/math.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/util/math.c.o -MF CMakeFiles/nova.dir/src/util/math.c.o.d -o CMakeFiles/nova.dir/src/util/math.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/math.c
+
+CMakeFiles/nova.dir/src/util/math.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/util/math.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/math.c > CMakeFiles/nova.dir/src/util/math.c.i
+
+CMakeFiles/nova.dir/src/util/math.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/util/math.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/math.c -o CMakeFiles/nova.dir/src/util/math.c.s
+
+CMakeFiles/nova.dir/src/util/error.c.o: CMakeFiles/nova.dir/flags.make
+CMakeFiles/nova.dir/src/util/error.c.o: /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/error.c
+CMakeFiles/nova.dir/src/util/error.c.o: CMakeFiles/nova.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nova.dir/src/util/error.c.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="/usr/bin/clang-tidy;--extra-arg-before=--driver-mode=gcc" --source=/home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/error.c -- /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nova.dir/src/util/error.c.o -MF CMakeFiles/nova.dir/src/util/error.c.o.d -o CMakeFiles/nova.dir/src/util/error.c.o -c /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/error.c
+
+CMakeFiles/nova.dir/src/util/error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nova.dir/src/util/error.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/error.c > CMakeFiles/nova.dir/src/util/error.c.i
+
+CMakeFiles/nova.dir/src/util/error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nova.dir/src/util/error.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bou/CLionProjects/NovaEngineBack/NovaEngine/src/util/error.c -o CMakeFiles/nova.dir/src/util/error.c.s
 
 # Object files for target nova
 nova_OBJECTS = \
 "CMakeFiles/nova.dir/src/main.c.o" \
-"CMakeFiles/nova.dir/src/game.c.o" \
-"CMakeFiles/nova.dir/src/raycast.c.o" \
-"CMakeFiles/nova.dir/src/ascii.c.o"
+"CMakeFiles/nova.dir/src/core/engine.c.o" \
+"CMakeFiles/nova.dir/src/core/world.c.o" \
+"CMakeFiles/nova.dir/src/input/input_handler.c.o" \
+"CMakeFiles/nova.dir/src/physics/collision.c.o" \
+"CMakeFiles/nova.dir/src/render/ascii_render.c.o" \
+"CMakeFiles/nova.dir/src/render/sdl_render.c.o" \
+"CMakeFiles/nova.dir/src/render/raycast.c.o" \
+"CMakeFiles/nova.dir/src/util/math.c.o" \
+"CMakeFiles/nova.dir/src/util/error.c.o"
 
 # External object files for target nova
 nova_EXTERNAL_OBJECTS =
 
 nova: CMakeFiles/nova.dir/src/main.c.o
-nova: CMakeFiles/nova.dir/src/game.c.o
-nova: CMakeFiles/nova.dir/src/raycast.c.o
-nova: CMakeFiles/nova.dir/src/ascii.c.o
+nova: CMakeFiles/nova.dir/src/core/engine.c.o
+nova: CMakeFiles/nova.dir/src/core/world.c.o
+nova: CMakeFiles/nova.dir/src/input/input_handler.c.o
+nova: CMakeFiles/nova.dir/src/physics/collision.c.o
+nova: CMakeFiles/nova.dir/src/render/ascii_render.c.o
+nova: CMakeFiles/nova.dir/src/render/sdl_render.c.o
+nova: CMakeFiles/nova.dir/src/render/raycast.c.o
+nova: CMakeFiles/nova.dir/src/util/math.c.o
+nova: CMakeFiles/nova.dir/src/util/error.c.o
 nova: CMakeFiles/nova.dir/build.make
 nova: CMakeFiles/nova.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bou/CLionProjects/NovaEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable nova"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable nova"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nova.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +249,6 @@ CMakeFiles/nova.dir/clean:
 .PHONY : CMakeFiles/nova.dir/clean
 
 CMakeFiles/nova.dir/depend:
-	cd /home/bou/CLionProjects/NovaEngine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bou/CLionProjects/NovaEngine /home/bou/CLionProjects/NovaEngine /home/bou/CLionProjects/NovaEngine/build /home/bou/CLionProjects/NovaEngine/build /home/bou/CLionProjects/NovaEngine/build/CMakeFiles/nova.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bou/CLionProjects/NovaEngineBack/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bou/CLionProjects/NovaEngineBack/NovaEngine /home/bou/CLionProjects/NovaEngineBack/NovaEngine /home/bou/CLionProjects/NovaEngineBack/build /home/bou/CLionProjects/NovaEngineBack/build /home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles/nova.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nova.dir/depend
 

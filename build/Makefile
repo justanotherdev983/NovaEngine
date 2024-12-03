@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bou/CLionProjects/NovaEngine
+CMAKE_SOURCE_DIR = /home/bou/CLionProjects/NovaEngineBack/NovaEngine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bou/CLionProjects/NovaEngine/build
+CMAKE_BINARY_DIR = /home/bou/CLionProjects/NovaEngineBack/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bou/CLionProjects/NovaEngine/build/CMakeFiles /home/bou/CLionProjects/NovaEngine/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles /home/bou/CLionProjects/NovaEngineBack/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bou/CLionProjects/NovaEngine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bou/CLionProjects/NovaEngineBack/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,53 +129,77 @@ nova/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/build
 .PHONY : nova/fast
 
-src/ascii.o: src/ascii.c.o
-.PHONY : src/ascii.o
+src/core/engine.o: src/core/engine.c.o
+.PHONY : src/core/engine.o
 
 # target to build an object file
-src/ascii.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.o
-.PHONY : src/ascii.c.o
+src/core/engine.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/engine.c.o
+.PHONY : src/core/engine.c.o
 
-src/ascii.i: src/ascii.c.i
-.PHONY : src/ascii.i
+src/core/engine.i: src/core/engine.c.i
+.PHONY : src/core/engine.i
 
 # target to preprocess a source file
-src/ascii.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.i
-.PHONY : src/ascii.c.i
+src/core/engine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/engine.c.i
+.PHONY : src/core/engine.c.i
 
-src/ascii.s: src/ascii.c.s
-.PHONY : src/ascii.s
+src/core/engine.s: src/core/engine.c.s
+.PHONY : src/core/engine.s
 
 # target to generate assembly for a file
-src/ascii.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/ascii.c.s
-.PHONY : src/ascii.c.s
+src/core/engine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/engine.c.s
+.PHONY : src/core/engine.c.s
 
-src/game.o: src/game.c.o
-.PHONY : src/game.o
+src/core/world.o: src/core/world.c.o
+.PHONY : src/core/world.o
 
 # target to build an object file
-src/game.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/game.c.o
-.PHONY : src/game.c.o
+src/core/world.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/world.c.o
+.PHONY : src/core/world.c.o
 
-src/game.i: src/game.c.i
-.PHONY : src/game.i
+src/core/world.i: src/core/world.c.i
+.PHONY : src/core/world.i
 
 # target to preprocess a source file
-src/game.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/game.c.i
-.PHONY : src/game.c.i
+src/core/world.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/world.c.i
+.PHONY : src/core/world.c.i
 
-src/game.s: src/game.c.s
-.PHONY : src/game.s
+src/core/world.s: src/core/world.c.s
+.PHONY : src/core/world.s
 
 # target to generate assembly for a file
-src/game.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/game.c.s
-.PHONY : src/game.c.s
+src/core/world.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/core/world.c.s
+.PHONY : src/core/world.c.s
+
+src/input/input_handler.o: src/input/input_handler.c.o
+.PHONY : src/input/input_handler.o
+
+# target to build an object file
+src/input/input_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/input/input_handler.c.o
+.PHONY : src/input/input_handler.c.o
+
+src/input/input_handler.i: src/input/input_handler.c.i
+.PHONY : src/input/input_handler.i
+
+# target to preprocess a source file
+src/input/input_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/input/input_handler.c.i
+.PHONY : src/input/input_handler.c.i
+
+src/input/input_handler.s: src/input/input_handler.c.s
+.PHONY : src/input/input_handler.s
+
+# target to generate assembly for a file
+src/input/input_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/input/input_handler.c.s
+.PHONY : src/input/input_handler.c.s
 
 src/main.o: src/main.c.o
 .PHONY : src/main.o
@@ -201,29 +225,149 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/raycast.o: src/raycast.c.o
-.PHONY : src/raycast.o
+src/physics/collision.o: src/physics/collision.c.o
+.PHONY : src/physics/collision.o
 
 # target to build an object file
-src/raycast.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.o
-.PHONY : src/raycast.c.o
+src/physics/collision.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/physics/collision.c.o
+.PHONY : src/physics/collision.c.o
 
-src/raycast.i: src/raycast.c.i
-.PHONY : src/raycast.i
+src/physics/collision.i: src/physics/collision.c.i
+.PHONY : src/physics/collision.i
 
 # target to preprocess a source file
-src/raycast.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.i
-.PHONY : src/raycast.c.i
+src/physics/collision.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/physics/collision.c.i
+.PHONY : src/physics/collision.c.i
 
-src/raycast.s: src/raycast.c.s
-.PHONY : src/raycast.s
+src/physics/collision.s: src/physics/collision.c.s
+.PHONY : src/physics/collision.s
 
 # target to generate assembly for a file
-src/raycast.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/raycast.c.s
-.PHONY : src/raycast.c.s
+src/physics/collision.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/physics/collision.c.s
+.PHONY : src/physics/collision.c.s
+
+src/render/ascii_render.o: src/render/ascii_render.c.o
+.PHONY : src/render/ascii_render.o
+
+# target to build an object file
+src/render/ascii_render.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/ascii_render.c.o
+.PHONY : src/render/ascii_render.c.o
+
+src/render/ascii_render.i: src/render/ascii_render.c.i
+.PHONY : src/render/ascii_render.i
+
+# target to preprocess a source file
+src/render/ascii_render.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/ascii_render.c.i
+.PHONY : src/render/ascii_render.c.i
+
+src/render/ascii_render.s: src/render/ascii_render.c.s
+.PHONY : src/render/ascii_render.s
+
+# target to generate assembly for a file
+src/render/ascii_render.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/ascii_render.c.s
+.PHONY : src/render/ascii_render.c.s
+
+src/render/raycast.o: src/render/raycast.c.o
+.PHONY : src/render/raycast.o
+
+# target to build an object file
+src/render/raycast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/raycast.c.o
+.PHONY : src/render/raycast.c.o
+
+src/render/raycast.i: src/render/raycast.c.i
+.PHONY : src/render/raycast.i
+
+# target to preprocess a source file
+src/render/raycast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/raycast.c.i
+.PHONY : src/render/raycast.c.i
+
+src/render/raycast.s: src/render/raycast.c.s
+.PHONY : src/render/raycast.s
+
+# target to generate assembly for a file
+src/render/raycast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/raycast.c.s
+.PHONY : src/render/raycast.c.s
+
+src/render/sdl_render.o: src/render/sdl_render.c.o
+.PHONY : src/render/sdl_render.o
+
+# target to build an object file
+src/render/sdl_render.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/sdl_render.c.o
+.PHONY : src/render/sdl_render.c.o
+
+src/render/sdl_render.i: src/render/sdl_render.c.i
+.PHONY : src/render/sdl_render.i
+
+# target to preprocess a source file
+src/render/sdl_render.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/sdl_render.c.i
+.PHONY : src/render/sdl_render.c.i
+
+src/render/sdl_render.s: src/render/sdl_render.c.s
+.PHONY : src/render/sdl_render.s
+
+# target to generate assembly for a file
+src/render/sdl_render.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/render/sdl_render.c.s
+.PHONY : src/render/sdl_render.c.s
+
+src/util/error.o: src/util/error.c.o
+.PHONY : src/util/error.o
+
+# target to build an object file
+src/util/error.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/error.c.o
+.PHONY : src/util/error.c.o
+
+src/util/error.i: src/util/error.c.i
+.PHONY : src/util/error.i
+
+# target to preprocess a source file
+src/util/error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/error.c.i
+.PHONY : src/util/error.c.i
+
+src/util/error.s: src/util/error.c.s
+.PHONY : src/util/error.s
+
+# target to generate assembly for a file
+src/util/error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/error.c.s
+.PHONY : src/util/error.c.s
+
+src/util/math.o: src/util/math.c.o
+.PHONY : src/util/math.o
+
+# target to build an object file
+src/util/math.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/math.c.o
+.PHONY : src/util/math.c.o
+
+src/util/math.i: src/util/math.c.i
+.PHONY : src/util/math.i
+
+# target to preprocess a source file
+src/util/math.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/math.c.i
+.PHONY : src/util/math.c.i
+
+src/util/math.s: src/util/math.c.s
+.PHONY : src/util/math.s
+
+# target to generate assembly for a file
+src/util/math.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nova.dir/build.make CMakeFiles/nova.dir/src/util/math.c.s
+.PHONY : src/util/math.c.s
 
 # Help Target
 help:
@@ -234,18 +378,36 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nova"
-	@echo "... src/ascii.o"
-	@echo "... src/ascii.i"
-	@echo "... src/ascii.s"
-	@echo "... src/game.o"
-	@echo "... src/game.i"
-	@echo "... src/game.s"
+	@echo "... src/core/engine.o"
+	@echo "... src/core/engine.i"
+	@echo "... src/core/engine.s"
+	@echo "... src/core/world.o"
+	@echo "... src/core/world.i"
+	@echo "... src/core/world.s"
+	@echo "... src/input/input_handler.o"
+	@echo "... src/input/input_handler.i"
+	@echo "... src/input/input_handler.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/raycast.o"
-	@echo "... src/raycast.i"
-	@echo "... src/raycast.s"
+	@echo "... src/physics/collision.o"
+	@echo "... src/physics/collision.i"
+	@echo "... src/physics/collision.s"
+	@echo "... src/render/ascii_render.o"
+	@echo "... src/render/ascii_render.i"
+	@echo "... src/render/ascii_render.s"
+	@echo "... src/render/raycast.o"
+	@echo "... src/render/raycast.i"
+	@echo "... src/render/raycast.s"
+	@echo "... src/render/sdl_render.o"
+	@echo "... src/render/sdl_render.i"
+	@echo "... src/render/sdl_render.s"
+	@echo "... src/util/error.o"
+	@echo "... src/util/error.i"
+	@echo "... src/util/error.s"
+	@echo "... src/util/math.o"
+	@echo "... src/util/math.i"
+	@echo "... src/util/math.s"
 .PHONY : help
 
 
