@@ -1,3 +1,0 @@
-/home/bou/CLionProjects/NovaEngineBack/NovaEngine/build/CMakeFiles/nova.dir
-/home/bou/CLionProjects/NovaEngineBack/NovaEngine/build/CMakeFiles/edit_cache.dir
-/home/bou/CLionProjects/NovaEngineBack/NovaEngine/build/CMakeFiles/rebuild_cache.dir
